@@ -1,16 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400|Poppins:400');
+
 html {
   font-size: 62.5%;
-  font-family: 'ariel', sans-serif;
-  color: white;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: white;
   margin: 0;
   padding: 0;
   display: block;
-  font-size: 1.5rem;
   background-color: #50465e;
 }
+
+p {
+  margin-bottom: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
+
+/* ==================Header================ */
 
 #header {
   background: #524763;
@@ -28,12 +75,12 @@ body {
 
 #header-container h2 {
   margin: 0;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 #title {
   margin: 0;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 a {
@@ -49,3 +96,54 @@ a {
 a:visited {
   color: white;
 }
+
+/* =======================MAIN================= */
+
+#main-conntainer {
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* =======================ROOMS================= */
+
+#room-title {
+  padding: 0 2rem;
+}
+
+#room-container {
+  max-width: 25rem;
+  padding: 2rem;
+}
+
+#room-form {
+  display: flex;
+}
+
+#room-input {
+  max-width: 18rem;
+  padding: 1rem;
+  border: #312a3b 1px solid;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+
+#room-btn {
+  padding: 1rem;
+  border: none;
+  background: #312a3b;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+#room-btn:hover {
+  transform: scale(1.05);
+  background: #141118;
+}
+
+.room {
+  padding: 0.5rem 0;
+}
+
+/* =======================CHATBOX================= */

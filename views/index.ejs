@@ -18,18 +18,21 @@
         </a>
       </div>
     </header>
-    <main>
+    <main id="main-conntainer">
+      <h3 id=room-title>Rooms</h3>
       <div id="room-container">
-        <% Object.keys(rooms).forEach(room => { %>
-        <a href="/<%= room %>">
-          <div><%= room %></div>
-        </a>
-        <% }) %>
-      </div>
-      <form action="/room" method="POST">
-        <input name="room" type="text" required />
-        <button type="submit">New Room</button>
-      </form>
+        <form id="room-form" action="/room" method="POST">
+          <input id="room-input" name="room" type="text" required />
+          <button id="room-btn" type="submit">NEW</button>
+        </form>
+        <div id="room-list">
+          <% Object.keys(rooms).forEach(room => { %>
+          <a href="/<%= room %>">
+            <div class="room"><%= room %></>
+          </a>
+          <% }) %>
+        </div>
+      </div id="room-container">
     </main>
   </body>
 </html>
