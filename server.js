@@ -31,7 +31,11 @@ app.get('/:room', (req, res) => {
   res.render('room', { roomName: req.params.room })
 })
 
-server.listen(3000)
+const port = process.env.port || 3000
+
+server.listen(port, () => {
+  console.log(`Port listening at http://localhost:${port}`)
+})
 
 io.on('connection', socket => {
   socket.on('new-user', (room, name) => {
@@ -40,12 +44,10 @@ io.on('connection', socket => {
     socket.to(room).broadcast.emit('user-connected', name)
   })
   socket.on('send-chat-message', (room, message) => {
-    socket
-      .to(room)
-      .broadcast.emit('chat-message', {
-        message: message,
-        name: rooms[room].users[socket.id]
-      })
+    socket.to(room).broadcast.emit('chat-message', {
+      message: message,
+      name: rooms[room].users[socket.id]
+    })
   })
   socket.on('disconnect', () => {
     getUserRooms(socket).forEach(room => {

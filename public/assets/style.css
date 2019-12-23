@@ -1,0 +1,51 @@
+html {
+  font-size: 62.5%;
+  font-family: 'ariel', sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 1.5rem;
+  background-color: #50465e;
+}
+
+#header {
+  background: #524763;
+  width: 100%;
+  box-shadow: 0px 4px 12px -6px black;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+#header-container h2 {
+  margin: 0;
+  padding: 2rem;
+}
+
+#title {
+  margin: 0;
+  padding: 2rem;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  color: white;
+}

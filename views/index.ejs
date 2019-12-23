@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Real time chat</title>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Real Time Chat</h1>
+    <header id="header">
+      <div id="header-container">
+        <h1 id="title">Real Time Chat</h1>
+        <a href="https://jameskemp.dev" target="_blank">
+          <h2>My Website</h2>
+        </a>
+      </div>
     </header>
     <main>
       <div id="room-container">
         <% Object.keys(rooms).forEach(room => { %>
-        <div><%= room %></div>
-        <a href="/<%= room %>">Join</a>
+        <a href="/<%= room %>">
+          <div><%= room %></div>
+        </a>
         <% }) %>
       </div>
       <form action="/room" method="POST">
