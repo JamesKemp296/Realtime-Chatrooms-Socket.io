@@ -7,4 +7,4 @@ A realtime multiple chatroom app built with socket.io
 * `cd` into it
 * Run `yarn` to install dependencies
 * Install nodemon globally with `sudo npm i -g nodemon` or as a dev dependency
-* User `yarn dev` and open 2 instances of `index.html` to get started.
+* User `yarn dev` and go to `localhost:3000`
