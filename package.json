@@ -1,0 +1,13 @@
+{
+  "name": "Socket-IO-Chatrooms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "JamesKemp296 <jameskemp2796@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  }
+}
