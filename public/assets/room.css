@@ -1,0 +1,27 @@
+#message-container div {
+  background-color: #ccc;
+  color: black;
+  padding: 5px;
+}
+#message-container div:nth-child(2n) {
+  background-color: #312a3b;
+  color: white;
+}
+#send-container {
+  position: fixed;
+  padding-bottom: 3rem;
+  bottom: 0;
+}
+
+#send-container.form {
+  width: 100%;
+  max-width: 1200px;
+}
+
+#send-container .input {
+  width: 90%;
+}
+
+#send-container .btn {
+  width: 10%;
+}

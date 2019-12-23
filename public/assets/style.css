@@ -66,6 +66,7 @@ small,
 }
 
 #header-container {
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -75,12 +76,12 @@ small,
 
 #header-container h2 {
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
 }
 
 #title {
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
 }
 
 a {
@@ -100,44 +101,40 @@ a:visited {
 /* =======================MAIN================= */
 
 #main-conntainer {
-  padding: 2rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
+  padding: 1rem 2rem;
 }
 
 /* =======================ROOMS================= */
 
-#room-title {
-  padding: 0 2rem;
-}
-
 #room-container {
   max-width: 25rem;
-  padding: 2rem;
 }
 
-#room-form {
+.form {
   display: flex;
 }
 
-#room-input {
-  max-width: 18rem;
+.input {
   padding: 1rem;
   border: #312a3b 1px solid;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
+  width: 80%;
 }
 
-#room-btn {
+.btn {
   padding: 1rem;
   border: none;
   background: #312a3b;
   color: white;
   transition: all 0.1s ease-in-out;
+  width: 20%;
 }
 
-#room-btn:hover {
+.btn:hover {
   transform: scale(1.05);
   background: #141118;
 }
