@@ -23,7 +23,6 @@ socket.on('room-created', room => {
   roomElement.innerText = room
   const roomLink = document.createElement('a')
   roomLink.href = `/${room}`
-  roomLink.innerText = 'join'
   roomContainer.append(roomElement)
   roomContainer.append(roomLink)
 })
