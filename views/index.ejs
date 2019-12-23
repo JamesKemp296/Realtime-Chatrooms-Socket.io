@@ -13,12 +13,16 @@
       <h1>Real Time Chat</h1>
     </header>
     <main>
-      <div id="message-container">
-        <form id="send-container">
-          <input type="text" id="message-input" />
-          <button type="submit" id="send-btn">Send</button>
-        </form>
+      <div id="room-container">
+        <% Object.keys(rooms).forEach(room => { %>
+        <div><%= room %></div>
+        <a href="/<%= room %>">Join</a>
+        <% }) %>
       </div>
+      <form action="/room" method="POST">
+        <input name="room" type="text" required />
+        <button type="submit">New Room</button>
+      </form>
     </main>
   </body>
 </html>
