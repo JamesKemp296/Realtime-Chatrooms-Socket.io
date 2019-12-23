@@ -5,48 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chat App</title>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/room.css" />
+
     <script>
       const roomName = '<%= roomName %>'
     </script>
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
-      #message-container {
-        width: 80%;
-        max-width: 1200px;
-      }
-      #message-container div {
-        background-color: #ccc;
-        padding: 5px;
-      }
-      #message-container div:nth-child(2n) {
-        background-color: #fff;
-      }
-      #send-container {
-        position: fixed;
-        padding-bottom: 30px;
-        bottom: 0;
-        background-color: white;
-        max-width: 1200px;
-        width: 80%;
-        display: flex;
-      }
-      #message-input {
-        flex-grow: 1;
-      }
-    </style>
   </head>
   <body>
-    <div id="message-container"></div>
-    <form id="send-container">
-      <input type="text" id="message-input" />
-      <button type="submit" id="send-button">Send</button>
-    </form>
+    <header id="header">
+      <div id="header-container">
+        <a href="/">
+          <h1 id="title">Real Time Chat</h1>
+        </a>
+        <a href="https://jameskemp.dev" target="_blank">
+          <h2>My Website</h2>
+        </a>
+      </div>
+    </header>
+    <main id="main-conntainer">
+      <h3 id="room-title">Room: <%= roomName %></h3>
+      <div id="message-container"></div>
+      <form class="form" id="send-container">
+        <input type="text" class="input" id="message-input" />
+        <button type="submit" class="btn" id="send-button">SEND</button>
+      </form>
+    </main>
   </body>
 </html>

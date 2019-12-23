@@ -12,7 +12,9 @@
   <body>
     <header id="header">
       <div id="header-container">
-        <h1 id="title">Real Time Chat</h1>
+        <a href="/">
+          <h1 id="title">Real Time Chat</h1>
+        </a>
         <a href="https://jameskemp.dev" target="_blank">
           <h2>My Website</h2>
         </a>
@@ -21,9 +23,9 @@
     <main id="main-conntainer">
       <h3 id=room-title>Rooms</h3>
       <div id="room-container">
-        <form id="room-form" action="/room" method="POST">
-          <input id="room-input" name="room" type="text" required />
-          <button id="room-btn" type="submit">NEW</button>
+        <form class="form" action="/room" method="POST">
+          <input class="input" name="room" type="text" required />
+          <button class="btn" type="submit">NEW</button>
         </form>
         <div id="room-list">
           <% Object.keys(rooms).forEach(room => { %>
@@ -32,7 +34,7 @@
           </a>
           <% }) %>
         </div>
-      </div id="room-container">
+      </div>
     </main>
   </body>
 </html>
